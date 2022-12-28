@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}View Page{% endblock %}
+
+{% block content %}
+<!--Here we gonna create a for loop -->
+<!--that gonna loop through all the toDoLists for a user and display them-->
+     {% for td in user.todolist.all %}
+           <p><a href="/{{td.id}}">{{td.name}}</a></p>
+     {% endfor %}
+{% endblock %}
